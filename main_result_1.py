@@ -1,17 +1,17 @@
-from user_requests import *
-from messages import *
+from messages import show_choice_result, get_wrong_message
+from user_requests import ask_for_drink_choice
 
-a = 'ДА!'
-b = a
-c = b
+choice_options = 'ДА!'
 
 while True:
-    choice = select_choice()
-    if choice == 1:
-        print(msg(choice, a))
-    elif choice == 2:
-        print(msg(choice, b))
-    elif choice == 3:
-        print(msg(choice, c))
-    else:
-        print(msg_wrong())
+    choice = ask_for_drink_choice()
+    match choice:
+        case 1:
+            print(show_choice_result(choice, choice_options))
+        case 2:
+            print(show_choice_result(choice, choice_options))
+        case 3:
+            print(show_choice_result(choice, choice_options))
+        case _:
+            print(get_wrong_message())
+            break
