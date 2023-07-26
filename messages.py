@@ -5,4 +5,3 @@ def msg(i, j):
 
 def msg_wrong():
     return f"Жми на ссылку, потом повтори выбор:\nhttps://natribu.org/"
-#

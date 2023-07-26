@@ -16,4 +16,3 @@ while True:
         print(msg(choice, res))
     else:
         print(msg_wrong())
-
